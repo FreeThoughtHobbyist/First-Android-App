@@ -3,8 +3,8 @@ android:
   components:
     # Uncomment the lines below if you want to
     # use the latest revision of Android SDK Tools
-    # - platform-tools
-    # - tools
+    - platform-tools
+    - tools
 
     # The BuildTools version used by your project
     - build-tools-23.0.2
@@ -27,6 +27,8 @@ env:
   global:
     # install timeout in minutes (2 minutes by default)
     - ADB_INSTALL_TIMEOUT=8
+  matrix:
+    - ANDROID_SDKS=android-22 ANDROID_TARGET=android-22 ANDROID_ABI=armeabi-v7a
 
 before_install:
  - chmod +x gradlew
