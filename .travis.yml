@@ -1,10 +1,11 @@
 language: android
+jdk: oraclejdk7
 android:
   components:
     # Uncomment the lines below if you want to
     # use the latest revision of Android SDK Tools
-    - platform-tools
-    - tools
+    #- platform-tools
+    #- tools
 
     # The BuildTools version used by your project
     - build-tools-23.0.2
@@ -16,6 +17,7 @@ android:
     # Additional components
     # - extra-google-google_play_services
     # - extra-google-m2repository
+    - extra-android-support
     - extra-android-m2repository
     # - addon-google_apis-google-19
 
@@ -26,7 +28,8 @@ android:
 env:
   global:
     # install timeout in minutes (2 minutes by default)
-    - ADB_INSTALL_TIMEOUT=8
+    #- ADB_INSTALL_TIMEOUT=8
+    - TERM=dumb
   matrix:
     - ANDROID_SDKS=android-22 ANDROID_TARGET=android-22 ANDROID_ABI=armeabi-v7a
 
