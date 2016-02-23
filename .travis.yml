@@ -38,3 +38,6 @@ script:
   - ./gradlew build connectedCheck --info
 #after_success:
 #  - codecov
+
+deploy:
+  skip_cleanup: true
